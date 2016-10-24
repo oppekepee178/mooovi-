@@ -1,5 +1,7 @@
 class ReviewsController < RankingController
 
-def new
+  def new
+   @reviews = Reviews.new
+  end
 
 end
