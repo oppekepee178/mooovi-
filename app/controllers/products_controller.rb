@@ -8,5 +8,9 @@ class ProductsController < RankingController
    @products = Product.find(params[:id])
  end
 
+ def search
+  @products = Product.where('title like(?)', "%#{params[:keyword]}%").limit(20)
+ end
+
 
 end
